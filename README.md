@@ -1,68 +1,53 @@
-# Git-övning — Week 2
+# Git-övning — Vecka 2
  
-A throwaway repo. Nothing here matters, which is the point: you can break it.
+Detta är ett "sandlåderepo" där innehållet är oviktigt, poängen är att ni ska kunna testa att använda github utan att det finns risk för att ha sönder något.
  
-Everything you do today you will do again for real during the project, on a repo
-where mistakes cost something. Today they cost nothing.
+## Del 1 — Att göra en pull request
  
-## Part 1 — Your own file (the everyday flow)
+Det här är ett mönster du ofta kommer att använda i kursen och utanför den.
  
-This is the loop you will use every day for the next seven weeks.
+1. Klona det här repot till din utvecklingsmiljö (Codespaces eller din laptop)
+2. Skapa en gren (branch) som har samma namn som till git-användarnamn: `git switch -c <your-username>`
+3. Skapa en fil `deltagare/<ditt-användarnamn>.md`. Kopiera mallen från 
+   `deltagare/EXEMPEL.md` och fyll i den.
+4. Gör commit och push: `git add`, `git commit -m "..."`, `git push -u origin <ditt-användarnamn>`
+5. Öppna en PR, pull request, mot `main` on GitHub.
+6. **Be din partner granska din PR.** De måste lämna minst två kommentarer på dina ändringar.
+7. Lös minst en av kommentarerna, pusha ändringen, och gör merge på din egen PR.
  
-1. Clone this repo **inside your Codespace** (not onto the laptop):
-   `git clone <repo-url>`
-2. Create a branch named after yourself: `git switch -c <your-username>`
-3. Create a file `deltagare/<your-username>.md`. Copy the template from
-   `deltagare/EXEMPEL.md` and fill it in.
-4. Commit and push: `git add`, `git commit -m "..."`, `git push -u origin <your-username>`
-5. Open a pull request against `main` on GitHub.
-6. **Ask your partner to review it.** They must leave at least two comments that
-   say something — "looks good" is not a review.
-7. Address at least one comment, push the fix, then merge your own PR.
+Du får inte göra merge utan att minst en person har godkänt det. Det är samma regel som många professionella organisationer använder, och det ser till att man inte hoppar över kodgranskningen bara för att man känner sig stressad.
  
-You cannot merge without an approval. That is deliberate: it is the same rule
-most professional teams run, and it is the reason code review does not get
-skipped when someone is in a hurry.
+## Del 2 — Merge-konflikter
  
-## Part 2 — The merge conflict (in pairs)
+Öppna `par/par-XX.md` där XX är numret på det par du är i. Den har två TODO-rader i sig.
  
-Find your pair number and open `par/par-XX.md`. It has two TODO lines in it.
+Ni ska båda redigera **samma rader**, samtidigt, på separate grenar.
  
-Both of you will edit **the same lines**, at the same time, on separate branches.
-That is not a mistake — it is the setup.
- 
-1. Both partners: branch off `main` (`git switch main && git pull && git switch -c par-XX-<name>`)
-2. Both partners: fill in **both** TODO lines with your own answers. Do not
-   coordinate. Commit and push.
-3. Both partners: open a PR against `main`.
-4. Whoever merges first — nothing happens. It just merges.
-5. The second one: GitHub now says *"This branch has conflicts that must be
-   resolved."* That person resolves it:
+1. Båda parterna: gör en ny gren från `main` (`git switch main && git pull && git switch -c par-XX-<name>`)
+2. Båda parterna: fyll in **båda** TODO-raderna med era egna svar utan att koordinera. Gör commit och push.
+3. Båda parterna: öppna en PR mot `main`.
+4. För den första som mergear händer ingenting - koden inkorporeras i main.
+5. För den andra säger GitHub nu: *"This branch has conflicts that must be
+   resolved."* Denna person behöver fixa det:
  
    ```
    git switch main
    git pull
    git switch par-XX-<name>
-   git merge main          # the conflict appears here
-   # edit the file: keep both answers, delete the <<<<<<< ======= >>>>>>> markers
+   git merge main          # konflikten kommer här
+   # editera filen: behåll båda svaren, radera markörerna <<<<<<< ======= >>>>>>>
    git add par-XX.md
    git commit
    git push
    ```
  
-6. The PR now merges cleanly.
+6. PR:en bör nu leda till en ren merge.
  
-**The lesson is in step 5.** A merge conflict is not an error and nothing is
-broken. Git is telling you that two people changed the same lines and it will
-not guess which one you meant. The second person to merge always resolves — and
-in a team, that will be you about half the time.
+Lärdomen är att en merge-konflikt inte är ett fel och att inget är trasigt. Det är git som berättar för oss att två olika personer ändrade samma rader och att den inte vill gissa vad som är "rätt svar". 
  
-## When things go wrong
+## Om något går fel
+
+- Testa `git status` och kolla om det ger ledtrådar
+- `git remote -v` visar vart du pushar dina ändringar
  
-- **Pushed and it went somewhere unexpected?** Run `git remote -v` and check the
-  URL. If it points at your own username instead of the course org, your push
-  created a personal fork. Say so — it is a five-second fix and it is worth
-  everyone seeing it once.
-- **Committed to `main` by accident?** Tell me. Do not try to fix it with
-  `git reset --hard`.
-- **Stuck?** `git status` says more than people expect. Read it before asking.
+
