@@ -4,11 +4,9 @@ Both partners edit **both** lines below, on your own branch, without
 coordinating. One of you will get a merge conflict. That is the exercise.
  
 ## Our team name
-Par cookiekakan
- 
-## The best command we learned in week 1
-Par cookiekakan
 TacoTuesday
  
 ## The best command we learned in week 1
 ls -al
+
+Detta är inget bra alls! Merga skiten!
