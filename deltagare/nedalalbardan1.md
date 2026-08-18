@@ -1,12 +1,12 @@
-# Förnamn Efternamn
+# Nedal Albardan
  
-**GitHub-användarnamn:** exempel-user
+**GitHub-användarnamn:** nedalalbardan1
  
 **One thing I already knew about data engineering before this course:**
-TODO
+A litle bit about agil
  
 **One thing from week 1 that I want to understand better:**
-TODO
+Docker
  
 **A command I learned in week 1 and will actually use again:**
-TODO
+echo
