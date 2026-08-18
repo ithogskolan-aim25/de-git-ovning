@@ -1,4 +1,4 @@
-# Förnamn Efternamn
+# Juan Andrade
  
 **GitHub-användarnamn:** JuanAndradeAI
  
@@ -9,4 +9,4 @@ almost nothing
 Version Control
  
 **A command I learned in week 1 and will actually use again:**
-cd
+cd, mkdir, ls -al, rm
