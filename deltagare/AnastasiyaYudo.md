@@ -1,7 +1,7 @@
 Anastasiya Yudo
  
-**AnastasiyaYudo:** exempel-user
- 
+**Git-hub username:** AnastasiyaYudo
+
 **One thing I already knew about data engineering before this course:**
 It's a lot of work with data & databases.
  
