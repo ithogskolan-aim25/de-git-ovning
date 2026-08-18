@@ -5,6 +5,7 @@ coordinating. One of you will get a merge conflict. That is the exercise.
 
 ## Our team name
 
+Team Dragon
 TODO: Team Dragon
 
 ## The best command we learned in week 1
