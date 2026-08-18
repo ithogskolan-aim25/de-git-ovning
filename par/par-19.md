@@ -8,3 +8,7 @@ Par cookiekakan
  
 ## The best command we learned in week 1
 Par cookiekakan
+TacoTuesday
+ 
+## The best command we learned in week 1
+ls -al
