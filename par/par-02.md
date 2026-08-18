@@ -8,3 +8,4 @@ TODO: write a team name here.
  
 ## The best command we learned in week 1
 TODO: write one command here, and one sentence on why.
+EM: my new raw
