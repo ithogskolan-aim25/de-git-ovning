@@ -9,4 +9,4 @@ it's hard!
 docker
  
 **A command I learned in week 1 and will actually use again:**
-ls
+ls -ltr
